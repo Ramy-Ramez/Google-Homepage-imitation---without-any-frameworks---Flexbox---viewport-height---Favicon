@@ -1,0 +1,42 @@
+/*Start Global Rules*/
+    /*CSS Resets*/
+* {margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+Or
+body {margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*/
+
+.clear-fix {clear: both}
+/*End Global Rules*/
+
+/*Start: Top Bar*/
+
+.top-bar {padding: 23px 13px; /*background-color: #333*/}
+.top-bar ul {list-style: none; /*background-color: red*/}/* ul {overflow: hidden}*/ /*Or overflow: auto    OR     .clear-fix*/
+.top-bar ul li {float: right; margin-right: 15px; font-family: arial,sans-serif; font-size: 13px; }
+.top-bar ul li:hover {text-decoration: underline}
+.top-bar ul li:nth-of-type(2) img {width: 16px; opacity: .55}
+.top-bar ul li:nth-of-type(2) img:hover {opacity: 1}
+/*.top-bar ul li:first-child {background-color: aqua}*/
+.top-bar ul li a {color: #555; text-decoration: none}
+.top-bar ul li a:visited {color: black}
+
+.top-bar ul li > button {color: #FFF;  border: none; font-weight: bold; background-color: #4285f4; border-radius: 2px; padding: 7px 12px; margin-top: -7px}
+.top-bar ul li > button:hover {
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    -webkit-box-shadow: 0 1px #999;
+    -moz-box-shadow: 0 1px #999;
+    box-shadow: 0 1px #999
+}
+/*End: Top Bar*/
