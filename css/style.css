@@ -1,5 +1,71 @@
-/*Start Global Rules*/
-    /*CSS Resets*/
+/*Notes:
+The design consists of three main divs, the upper and lower one have 12vh and the middle one has 76vh.(Total = 100vh).
+The middle div is centered vertically using CSS display table property.
+*/
+
+/*Start: Top Bar*/
+.top-bar {height: 12vh; padding: 23px 13px; /*background-color: #333*/}
+.top-bar ul {/*background-color: red*/}   /* ul {overflow: hidden}*/ /*Or overflow: auto    OR     .clear-fix*/
+.top-bar ul li:not(:last-of-type) {margin-right: 18px; font-family: arial,sans-serif; font-size: 13px; opacity: .87}
+.top-bar ul li:hover {text-decoration: underline; opacity: .85}
+.top-bar ul li:nth-of-type(3) img {width: 16px; opacity: .55}
+.top-bar ul li:nth-of-type(3) img:hover {opacity: 1}
+/*.top-bar ul li:first-child {background-color: aqua}*/
+.top-bar ul li a {color: #555; text-decoration: none}
+.top-bar ul li a:visited {color: black}
+.top-bar ul li > button {color: #FFF;  border: none; font-weight: bold; background-color: #4285f4; border-radius: 2px; padding: 8px 12px; margin-top: -7px}
+.top-bar ul li > button:hover {
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    -webkit-box-shadow: 0 1px #999;
+    -moz-box-shadow: 0 1px #999;
+    box-shadow: 0 1px #999}
+/*End: Top Bar*/
+
+/*Start: Search Section*/
+.search {height: 76vh; /*background-color: #555*/}
+.search .table {display: table; height: 100%; margin: 0 auto}
+.search .table .table-row {display: table-row}
+.search .search-content {position: relative; display: table-cell; vertical-align: middle}/*to use position: absolute for the voice search image*/
+.search form input:first-of-type {display: block; margin: 20px auto; width: 582px; height: 44px; padding: 12px 20px; border-radius: 24px; border: 1px solid #dfe1e5; outline: none}
+.search form input:first-of-type:hover {box-shadow: 1px 1px 1px #DDD, -1px -1px 1px #DDD}
+.search form input:first-of-type:focus::-webkit-input-placeholder {opacity: 0}
+.search form input:nth-of-type(2), .search form input:nth-of-type(3) {color: #5F6368; padding: 5px 16px; line-height: 27px; background-color: #f1f1f1; border: 1px solid #f2f2f2; border-radius: 4px; margin: 0 10px 15px 0}
+.search form input:nth-of-type(2):hover, .search form input:nth-of-type(3):hover {border: 1px solid #c6c6c6; color: #222; cursor: pointer}
+.search .search-content span {position: absolute; top: 49%; left: 93%; width: 24px; height: 24px}/*The parent .search-content div is position: relative*/
+.search .search-content span img {width: 100%; cursor: pointer}
+.search .search-content p {line-height: 28px; color: #222; font-size: 14px}
+.search .search-content p a {text-decoration: none; color: #1a0dab}
+.search .search-content p a:visited {color: black}
+/*End: Search Section*/
+
+/*Start: Footer*/
+footer {height: 12vh; background-color: #f2f2f2; border: 1px solid #e4e4e4; line-height: 40px; color: #5F6368; font-family: arial,sans-serif; font-size: 15px}
+footer hr {border: none; height: 1px; background-color: #e4e4e4}
+footer .container .second-half ul li:hover {text-decoration: underline}
+footer .container .second-half ul.float-left li {margin-right: 27px; font-size: 13px}
+footer .container .second-half ul.float-right li {margin-right: 27px; font-size: 13px}
+footer .container .second-half ul.float-right li:last-of-type {margin-right: 0}
+footer .container .second-half ul li a {text-decoration: none}
+footer .container .second-half ul li a:visited {color: #5F6368}
+/*End: Footer*/
+
+
+
+/*My Framework*/
+.container {width: 1306px; margin: 0 auto}
+.float-left {float: left}
+.float-right {float: right}
+.text-center {text-align: center}
+.img-responsive {width: 100%}
+.img-circle {border-radius: 50%}
+.img-thumbnail {padding: 3px; background-color: #FFF; border: 1px solid #CCC}
+.h1 {font-size: 2em}
+.list-unstyled {list-style: none}
+.clearfix {clear: both}
+        /*CSS Resets*/
 * {margin: 0; padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,51 +78,4 @@ body {margin: 0; padding: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-*/
-
-.container {width: 1350px; margin: auto}
-.clear-fix {clear: both}
-/*End Global Rules*/
-
-/*Start: Top Bar*/
-.top-bar {padding: 23px 13px; /*background-color: #333*/}
-.top-bar ul {list-style: none; /*background-color: red*/}   /* ul {overflow: hidden}*/ /*Or overflow: auto    OR     .clear-fix*/
-.top-bar ul li {float: right; margin-right: 18px; font-family: arial,sans-serif; font-size: 13px; }
-.top-bar ul li:hover {text-decoration: underline}
-.top-bar ul li:nth-of-type(2) img {width: 16px; opacity: .55}
-.top-bar ul li:nth-of-type(2) img:hover {opacity: 1}
-/*.top-bar ul li:first-child {background-color: aqua}*/
-.top-bar ul li a {color: #555; text-decoration: none}
-.top-bar ul li a:visited {color: black}
-
-.top-bar ul li > button {color: #FFF;  border: none; font-weight: bold; background-color: #4285f4; border-radius: 2px; padding: 8px 12px; margin-top: -7px}
-.top-bar ul li > button:hover {
-    -moz-transition: all .1s ease-in-out;
-    -ms-transition: all .1s ease-in-out;
-    -o-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-    -webkit-box-shadow: 0 1px #999;
-    -moz-box-shadow: 0 1px #999;
-    box-shadow: 0 1px #999
-}
-/*End: Top Bar*/
-
-/*Start: Search Bar*/
-.search {text-align: center; width: 60%; margin: auto}
-.search form {position: relative}
-.search form span {display: inline-block; height: 30px; position: absolute; top: 7px; right: 160px}
-.search form span img {height: 30px; cursor: pointer}
-.search form input:first-of-type {display: block; margin: 20px auto; width: 65%; height: 10%; padding: 12px 20px; border-radius: 24px; border: 1px solid #dfe1e5; outline: none}
-.search form input:first-of-type:hover {box-shadow: 1px 1px 1px #DDD, -1px -1px 1px #DDD}
-.search form input:first-of-type:focus::-webkit-input-placeholder {opacity: 0}
-.search form input:nth-of-type(2), .search form input:nth-of-type(3) {display: inline-block; color: #5F6368; padding: 5px 16px; line-height: 27px; background-color: #f1f1f1; border: 1px solid #f2f2f2; border-radius: 4px; margin: 0 10px 15px 0}
-.search form input:nth-of-type(2):hover, .search form input:nth-of-type(3):hover {border: 1px solid #c6c6c6; color: #222}
-.search p {line-height: 28px; color: #222; font-size: 14px}
-.search p a {text-decoration: none; color: #1a0dab}
-.search p a:visited {color: black}
-/*End: Search Bar*/
-
-/*Start: Footer*/
-footer {background-color: #f2f2f2}
-
-/*End: Footer*/
+/*My Framework*/
